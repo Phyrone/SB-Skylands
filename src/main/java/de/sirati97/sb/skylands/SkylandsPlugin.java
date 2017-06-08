@@ -8,12 +8,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.craftbukkit.libs.joptsimple.internal.Strings;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
 import uk.co.jacekk.bukkit.skylandsplus.generation.SkylandsGenerator;
@@ -81,22 +77,6 @@ public class SkylandsPlugin extends JavaPlugin implements Listener {
             }
             SkylandsGenerator skylandsGenerator = new SkylandsGenerator(this, args);
             return multiCore ? new MultiCoreGenerator(skylandsGenerator, this) : skylandsGenerator;
-        }
-    }
-
-    @EventHandler(priority = EventPriority.MONITOR)
-    public void onPluginLoad(PluginEnableEvent enableEvent) {
-        if (enableEvent.getPlugin().getName().equals("SB-Plots")) {
-            if(config.contains("sb-plots")) {
-                String worldName = config.getString("sb-plots.name");
-                long seed = config.getLong("sb-plots.seed");
-                if (Strings.isNullOrEmpty(worldName)) {
-                    throw new IllegalStateException("Invalid world name!");
-                } else {
-                    PlotsIntegration integration = new PlotsIntegration();
-                    integration.registerWorld(this, enableEvent.getPlugin(), worldName, seed);
-                }
-            }
         }
     }
 

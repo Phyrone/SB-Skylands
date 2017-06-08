@@ -1,14 +1,15 @@
 package de.sirati97.sb.skylands.gen.pop.nms;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
-import net.minecraft.server.v1_11_R1.BlockPosition;
-import net.minecraft.server.v1_11_R1.Blocks;
-import net.minecraft.server.v1_11_R1.ChunkSnapshot;
-import net.minecraft.server.v1_11_R1.IBlockData;
-import net.minecraft.server.v1_11_R1.Material;
-import net.minecraft.server.v1_11_R1.MathHelper;
-import net.minecraft.server.v1_11_R1.World;
-import net.minecraft.server.v1_11_R1.WorldGenBase;
+import net.minecraft.server.v1_12_R1.BlockPosition;
+import net.minecraft.server.v1_12_R1.Blocks;
+import net.minecraft.server.v1_12_R1.ChunkSnapshot;
+import net.minecraft.server.v1_12_R1.IBlockData;
+import net.minecraft.server.v1_12_R1.Material;
+import net.minecraft.server.v1_12_R1.MathHelper;
+import net.minecraft.server.v1_12_R1.World;
+import net.minecraft.server.v1_12_R1.WorldGenBase;
 
 import java.util.Random;
 
@@ -148,7 +149,7 @@ public class WorldGenSecondaryCaves extends WorldGenBase {
                                         double var61 = ((double)(var60 - 1) + 0.5D - var8) / var31;
                                         if(var61 > -0.7D && var54 * var54 + var61 * var61 + var57 * var57 < 1.0D) {
                                             IBlockData var63 = var5.a(var51, var60, var56);
-                                            IBlockData var64 = (IBlockData)Objects.firstNonNull(var5.a(var51, var60 + 1, var56), b);
+                                            IBlockData var64 = (IBlockData)MoreObjects.firstNonNull(var5.a(var51, var60 + 1, var56), b);
                                             if(var63.getBlock() == Blocks.GRASS || var63.getBlock() == Blocks.MYCELIUM) {
                                                 var59 = true;
                                             }
