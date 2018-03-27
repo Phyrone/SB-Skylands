@@ -118,9 +118,9 @@ public class SkylandsGenerator extends org.bukkit.generator.ChunkGenerator imple
             } else if (token.matches("high=\\d{1,3}")) {
                 high = Integer.parseInt(token.substring(5));
             } else if (token.equalsIgnoreCase("high")) {
-                high = 145;
+                high = 128;
             } else if (token.equalsIgnoreCase("very-high")) {
-                high = 170;
+                high = 128;
             } else if (token.equalsIgnoreCase("no-decorated-caves")) {
                 decorated_caves = false;
             } else if (token.equalsIgnoreCase("no-caves")) {
@@ -198,6 +198,9 @@ public class SkylandsGenerator extends org.bukkit.generator.ChunkGenerator imple
                 no_ocean = true;
                 ocean = Biome.valueOf(token.substring(5));
             }
+            
+            offset = 90;
+            high = 128;
         }
     }
 
