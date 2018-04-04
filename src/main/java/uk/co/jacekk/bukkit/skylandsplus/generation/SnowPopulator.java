@@ -13,6 +13,13 @@ import java.util.Random;
 
 public class SnowPopulator extends BlockPopulator {
 	
+    private final int offset;
+    
+    public SnowPopulator(int offset)
+    {
+        this.offset = offset;
+    }
+    
 	public void populate(World world, Random random, Chunk chunk){
 		int chunkX = chunk.getX() * 16;
 		int chunkZ = chunk.getZ() * 16;
@@ -25,7 +32,7 @@ public class SnowPopulator extends BlockPopulator {
 				if (extremeHills || BiomesUtil.isIcy(biome)){
 					int y = world.getHighestBlockYAt(chunkX + x, chunkZ + z);
 
-					if (y > (extremeHills?95:5)){
+					if (y > ((extremeHills?95:5) + offset)){
 						Block block = chunk.getBlock(x, y, z);
 
 						Block down = block.getRelative(BlockFace.DOWN);

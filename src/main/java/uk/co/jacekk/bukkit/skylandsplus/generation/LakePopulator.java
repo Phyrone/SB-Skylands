@@ -14,9 +14,11 @@ import java.util.Random;
 public class LakePopulator
         extends BlockPopulator {
     private Random random;
+    private final int offset;
 
-    public LakePopulator(org.bukkit.World world) {
+    public LakePopulator(org.bukkit.World world, int offset) {
         this.random = new Random(world.getSeed());
+        this.offset = offset;
     }
 
     public void populate(org.bukkit.World world, Random random, Chunk chunk) {
@@ -30,7 +32,7 @@ public class LakePopulator
             if (BiomesUtil.isJungle(world.getBiome(x, z))) {
                 int y = world.getHighestBlockYAt(x, z) + 2;
                 BlockPosition pos = new BlockPosition(x, y, z);
-                if (this.random.nextInt(100) < 85) {
+                if (this.random.nextInt(100) < 85 + offset) {
                     WorldGenLakes wgl = new WorldGenLakes(Blocks.WATER);
                     wgl.generate(mcWorld, this.random, pos);
                     WorldGenReed wgr = new WorldGenReed();

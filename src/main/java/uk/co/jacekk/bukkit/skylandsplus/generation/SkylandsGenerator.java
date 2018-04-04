@@ -244,13 +244,13 @@ public class SkylandsGenerator extends org.bukkit.generator.ChunkGenerator imple
         switch (world.getEnvironment()) {
             case NORMAL:
                 populators.add(new BiomePopulator());
-                populators.add(new LakePopulator(world));
+                populators.add(new LakePopulator(world, offset));
                 populators.add(new PumpkinPopulator(world));
                 populators.add(new MelonPopulator(world));
-                populators.add(new OrePopulator(world, glowstone));
+                populators.add(new OrePopulator(world, glowstone, offset));
                 populators.add(new CactusPopulator(world));
-                populators.add(new RedSandPopulator());
-                populators.add(new SnowPopulator());
+                populators.add(new RedSandPopulator(offset));
+                populators.add(new SnowPopulator(offset));
                 if (glowstone) {
                     populators.add(new SkyGlowstonePopulator());
                 }
@@ -265,7 +265,7 @@ public class SkylandsGenerator extends org.bukkit.generator.ChunkGenerator imple
                 populators.add(new NetherFirePopulator(world));
                 //populators.add(new NetherGlowstonePopulator(world));
                 //populators.add(new NetherWartPopulator(world));
-                populators.add(new OrePopulator(world, false));
+                populators.add(new OrePopulator(world, false, offset));
                 break;
         }
 

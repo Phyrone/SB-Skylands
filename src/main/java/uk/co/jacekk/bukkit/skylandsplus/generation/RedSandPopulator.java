@@ -11,7 +11,11 @@ import org.bukkit.generator.BlockPopulator;
 import java.util.Random;
 
 public class RedSandPopulator extends BlockPopulator {
-    public RedSandPopulator() {
+    
+    private final int offset;
+    
+    public RedSandPopulator(int offset) {
+        this.offset = offset;
     }
 
     @SuppressWarnings("deprecation")
@@ -20,7 +24,7 @@ public class RedSandPopulator extends BlockPopulator {
             for (int z = 0; z < 16; z++) {
                 Biome biome = chunk.getBlock(x, 64, z).getBiome();
                 if (BiomesUtil.isMesa(biome)) {
-                    for (int y = 4; y < 128; y++) {
+                    for (int y = 4 + offset; y < 128 + offset; y++) {
                         Block block = chunk.getBlock(x, y, z);
 
                         if (block.getType().equals(Material.SAND)) {
