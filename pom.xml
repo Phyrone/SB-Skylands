@@ -49,13 +49,13 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/Sb-Plots-Stub-1.0-SNAPSHOT.jar</systemPath>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.bukkit</groupId>-->
-			<!--<artifactId>craftbukkit</artifactId>-->
-			<!--<version>1.12-R0.1-SNAPSHOT</version>-->
-			<!--<scope>system</scope>-->
-			<!--<systemPath>${project.basedir}/lib/craftbukkit-1.12.2.jar</systemPath>-->
- 		<!--</dependency>-->
+		<dependency>
+			<groupId>org.bukkit</groupId>
+			<artifactId>craftbukkit</artifactId>
+			<version>1.13.2-R0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/craftbukkit-1.13.2.jar</systemPath>
+ 		</dependency>
 	</dependencies>
 
 </project>

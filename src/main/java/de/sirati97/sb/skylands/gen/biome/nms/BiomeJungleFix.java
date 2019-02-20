@@ -1,16 +1,16 @@
 package de.sirati97.sb.skylands.gen.biome.nms;
 
-import net.minecraft.server.v1_12_R1.BiomeBase;
-import net.minecraft.server.v1_12_R1.BiomeJungle;
-import net.minecraft.server.v1_12_R1.BlockFlowers;
-import net.minecraft.server.v1_12_R1.BlockPosition;
-import net.minecraft.server.v1_12_R1.ChunkSnapshot;
-import net.minecraft.server.v1_12_R1.EnumCreatureType;
-import net.minecraft.server.v1_12_R1.World;
-import net.minecraft.server.v1_12_R1.WorldGenMelon;
-import net.minecraft.server.v1_12_R1.WorldGenTreeAbstract;
-import net.minecraft.server.v1_12_R1.WorldGenVines;
-import net.minecraft.server.v1_12_R1.WorldGenerator;
+import net.minecraft.server.v1_13_R2.BiomeBase;
+import net.minecraft.server.v1_13_R2.BiomeJungle;
+import net.minecraft.server.v1_13_R2.BlockFlowers;
+import net.minecraft.server.v1_13_R2.BlockPosition;
+import net.minecraft.server.v1_13_R2.ChunkSnapshot;
+import net.minecraft.server.v1_13_R2.EnumCreatureType;
+import net.minecraft.server.v1_13_R2.World;
+import net.minecraft.server.v1_13_R2.WorldGenMelon;
+import net.minecraft.server.v1_13_R2.WorldGenTreeAbstract;
+import net.minecraft.server.v1_13_R2.WorldGenVines;
+import net.minecraft.server.v1_13_R2.WorldGenerator;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
