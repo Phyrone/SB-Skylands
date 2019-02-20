@@ -1,8 +1,7 @@
 package de.sirati97.sb.skylands.nms;
 
 //
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
+// imported from craftbukkit-1.12.2
 //
 
 import net.minecraft.server.v1_13_R2.Block;
