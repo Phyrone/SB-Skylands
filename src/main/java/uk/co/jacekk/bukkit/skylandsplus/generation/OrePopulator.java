@@ -54,7 +54,7 @@ public class OrePopulator extends BlockPopulator {
                         if (d13 * d13 + d14 * d14 < 1.0D) {
                             for (int i5 = m; i5 <= i2; i5++) {
                                 double d15 = (i5 + 0.5D - d9) / (d11 / 2.0D);
-                                if ((d13 * d13 + d14 * d14 + d15 * d15 < 1.0D) && ((world.getBlockTypeIdAt(i3, i4, i5) == Material.STONE.getId()) || (world.getBlockTypeIdAt(i3, i4, i5) == Material.NETHERRACK.getId()))) {
+                                if ((d13 * d13 + d14 * d14 + d15 * d15 < 1.0D) && ((world.getBlockAt(i3, i4, i5).getType() == Material.STONE) || (world.getBlockAt(i3, i4, i5).getType() == Material.NETHERRACK))) {
                                     world.getBlockAt(i3, i4, i5).setType(oreType);
                                 }
                             }
@@ -133,7 +133,7 @@ public class OrePopulator extends BlockPopulator {
                 int z = worldChunkZ + this.random.nextInt(16);
                 int y = this.random.nextInt(128);
 
-                createClump(world, Material.QUARTZ_ORE, 20, x, y, z);
+                createClump(world, Material.NETHER_QUARTZ_ORE, 20, x, y, z);
             }
         }
     }

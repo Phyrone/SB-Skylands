@@ -47,6 +47,6 @@ public class SkyGlowstonePopulator extends BlockPopulator {
     }
 
     private boolean checkMaterial(Material mat) {
-        return mat.equals(Material.STONE) ||mat.equals(Material.DIRT) ||mat.equals(Material.GRASS) ||mat.equals(Material.MYCEL) ||mat.equals(Material.SAND) ||mat.equals(Material.SANDSTONE) ||mat.equals(Material.GRAVEL) ||mat.equals(Material.COBBLESTONE);
+        return mat.equals(Material.STONE) ||mat.equals(Material.DIRT) ||mat.equals(Material.GRASS) ||mat.equals(Material.MYCELIUM) ||mat.equals(Material.SAND) ||mat.equals(Material.SANDSTONE) ||mat.equals(Material.GRAVEL) ||mat.equals(Material.COBBLESTONE);
     }
 }

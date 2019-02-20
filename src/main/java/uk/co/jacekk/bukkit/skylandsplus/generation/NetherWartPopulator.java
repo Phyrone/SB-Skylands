@@ -30,10 +30,10 @@ public class NetherWartPopulator extends BlockPopulator
 	            Block ground = block.getRelative(BlockFace.DOWN);
 	            Biome biome = block.getBiome();
 	            if (ground.getType() == Material.SOUL_SAND) {
-	              if (biome == Biome.HELL)
+	              if (biome == Biome.NETHER)
 	              {
 	                if (this.random.nextInt(100) < 7) {
-	                  block.setType(this.random.nextInt(100) > 85 ? Material.NETHER_WARTS : Material.AIR);
+	                  block.setType(this.random.nextInt(100) > 85 ? Material.NETHER_WART : Material.AIR);
 	                }
 	              }
 	            }

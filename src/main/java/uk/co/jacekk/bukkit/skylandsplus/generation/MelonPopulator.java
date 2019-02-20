@@ -42,7 +42,7 @@ public void populate(World world, Random random, Chunk chunk)
         Block block = world.getBlockAt(j, k, m);
         Block below = world.getBlockAt(j, k - 1, m);
         if ((block.getType() == Material.AIR) && (below.getType() == Material.GRASS)) {
-          block.setTypeIdAndData(Material.MELON_BLOCK.getId(), (byte)this.random.nextInt(4), false);
+          block.setType(Material.MELON, false);
         }
       }
     }

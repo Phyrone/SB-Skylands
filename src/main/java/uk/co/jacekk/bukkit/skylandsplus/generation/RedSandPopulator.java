@@ -28,10 +28,10 @@ public class RedSandPopulator extends BlockPopulator {
                         Block block = chunk.getBlock(x, y, z);
 
                         if (block.getType().equals(Material.SAND)) {
-                            block.setData((byte) 1);
+                            block.setBlockData(Material.STONE.createBlockData());
                         }
 
-                        if (block.getType().equals(Material.DEAD_BUSH) || block.getType().equals(Material.LONG_GRASS) || block.getType().equals(Material.CACTUS)) {
+                        if (block.getType().equals(Material.DEAD_BUSH) || block.getType().equals(Material.TALL_GRASS) || block.getType().equals(Material.CACTUS)) {
                             block.setType(Material.AIR);
                         }
                     }

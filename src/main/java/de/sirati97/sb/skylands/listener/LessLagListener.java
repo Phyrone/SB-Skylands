@@ -11,6 +11,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityChangeBlockEvent;
 import org.bukkit.event.entity.EntitySpawnEvent;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.generator.ChunkGenerator;
 import uk.co.jacekk.bukkit.skylandsplus.generation.SkylandsGenerator;
 
@@ -80,7 +81,7 @@ public class LessLagListener implements Listener {
         while (!to.getType().isSolid() && to.getY() > 1) {
             to = to.getRelative(BlockFace.DOWN);
         }
-        byte data = from.getData();
+        BlockData data = from.getBlockData();
         Material type = fromMat;
         boolean place = to.getType().isSolid();
 
@@ -89,11 +90,11 @@ public class LessLagListener implements Listener {
             from.setType(Material.AIR);
             if (place) {
                 to.setType(type);
-                to.setData(data);
+                to.setBlockData(data);
             }
             from = from.getRelative(BlockFace.UP);
             type = from.getType();
-            data = from.getData();
+            data = from.getBlockData();
         } while (type == Material.SAND || type == Material.GRAVEL);
     }
 

@@ -29,40 +29,40 @@ public class EndTowerPopulator extends BlockPopulator {
 				height += 80 - y;
 			}
 			
-			if (chunk.getBlock(x, y, z).getType() == Material.ENDER_STONE){
+			if (chunk.getBlock(x, y, z).getType() == Material.END_STONE){
 				for (int i = 0; i < height; ++i){
-					chunk.getBlock(x, y + i, z).setTypeId(Material.OBSIDIAN.getId());
+					chunk.getBlock(x, y + i, z).setType(Material.OBSIDIAN);
 					
-					chunk.getBlock(x + 1, y + i, z).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x - 1, y + i, z).setTypeId(Material.OBSIDIAN.getId());
+					chunk.getBlock(x + 1, y + i, z).setType(Material.OBSIDIAN);
+					chunk.getBlock(x - 1, y + i, z).setType(Material.OBSIDIAN);
 					
-					chunk.getBlock(x, y + i, z + 1).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x, y + i, z - 1).setTypeId(Material.OBSIDIAN.getId());
+					chunk.getBlock(x, y + i, z + 1).setType(Material.OBSIDIAN);
+					chunk.getBlock(x, y + i, z - 1).setType(Material.OBSIDIAN);
 					
-					chunk.getBlock(x + 1, y + i, z - 1).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x - 1, y + i, z - 1).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x + 1, y + i, z + 1).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x - 1, y + i, z + 1).setTypeId(Material.OBSIDIAN.getId());
+					chunk.getBlock(x + 1, y + i, z - 1).setType(Material.OBSIDIAN);
+					chunk.getBlock(x - 1, y + i, z - 1).setType(Material.OBSIDIAN);
+					chunk.getBlock(x + 1, y + i, z + 1).setType(Material.OBSIDIAN);
+					chunk.getBlock(x - 1, y + i, z + 1).setType(Material.OBSIDIAN);
 					
-					chunk.getBlock(x + 2, y + i, z).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x - 2, y + i, z).setTypeId(Material.OBSIDIAN.getId());
+					chunk.getBlock(x + 2, y + i, z).setType(Material.OBSIDIAN);
+					chunk.getBlock(x - 2, y + i, z).setType(Material.OBSIDIAN);
 					
-					chunk.getBlock(x, y + i, z + 2).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x, y + i, z - 2).setTypeId(Material.OBSIDIAN.getId());
+					chunk.getBlock(x, y + i, z + 2).setType(Material.OBSIDIAN);
+					chunk.getBlock(x, y + i, z - 2).setType(Material.OBSIDIAN);
 					
-					chunk.getBlock(x + 1, y + i, z - 2).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x - 1, y + i, z - 2).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x + 1, y + i, z + 2).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x - 1, y + i, z + 2).setTypeId(Material.OBSIDIAN.getId());
+					chunk.getBlock(x + 1, y + i, z - 2).setType(Material.OBSIDIAN);
+					chunk.getBlock(x - 1, y + i, z - 2).setType(Material.OBSIDIAN);
+					chunk.getBlock(x + 1, y + i, z + 2).setType(Material.OBSIDIAN);
+					chunk.getBlock(x - 1, y + i, z + 2).setType(Material.OBSIDIAN);
 					
-					chunk.getBlock(x - 2, y + i, z + 1).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x - 2, y + i, z - 1).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x + 2, y + i, z + 1).setTypeId(Material.OBSIDIAN.getId());
-					chunk.getBlock(x + 2, y + i, z - 1).setTypeId(Material.OBSIDIAN.getId());
+					chunk.getBlock(x - 2, y + i, z + 1).setType(Material.OBSIDIAN);
+					chunk.getBlock(x - 2, y + i, z - 1).setType(Material.OBSIDIAN);
+					chunk.getBlock(x + 2, y + i, z + 1).setType(Material.OBSIDIAN);
+					chunk.getBlock(x + 2, y + i, z - 1).setType(Material.OBSIDIAN);
 				}
 				
-				chunk.getBlock(x, y + height, z).setTypeId(Material.BEDROCK.getId());
-				chunk.getBlock(x, y + height + 1, z).setTypeId(Material.FIRE.getId());
+				chunk.getBlock(x, y + height, z).setType(Material.BEDROCK);
+				chunk.getBlock(x, y + height + 1, z).setType(Material.FIRE);
 				world.spawn(chunk.getBlock(x, y + height, z).getLocation().add(0.5, 0, 0.5), EnderCrystal.class);
 				
 				if (this.random.nextInt(100) < 10){

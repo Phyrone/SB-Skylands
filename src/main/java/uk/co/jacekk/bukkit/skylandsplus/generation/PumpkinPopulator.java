@@ -31,7 +31,7 @@ public class PumpkinPopulator
                 Block block = world.getBlockAt(j, k, m);
                 Block below = world.getBlockAt(j, k - 1, m);
                 if ((block.getType() == Material.AIR) && (below.getType() == Material.GRASS)) {
-                    block.setTypeIdAndData(Material.PUMPKIN.getId(), (byte) this.random.nextInt(4), false);
+                    block.setType(Material.PUMPKIN, false);
                 }
             }
         }
