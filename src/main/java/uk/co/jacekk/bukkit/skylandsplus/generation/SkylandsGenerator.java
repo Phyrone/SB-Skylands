@@ -11,6 +11,7 @@ import de.sirati97.sb.skylands.gen.pop.nms.WorldGenSkyGlowstone;
 import de.sirati97.sb.skylands.nms.BetterChunkSnapshot;
 import de.sirati97.sb.skylands.util.Cleanable;
 import de.sirati97.sb.skylands.util.CleanupRunnable;
+import net.minecraft.server.v1_13_R2.WorldGenLargeFeature;
 import net.minecraft.server.v1_13_R2.Block;
 import net.minecraft.server.v1_13_R2.BlockFlowers;
 import net.minecraft.server.v1_13_R2.Blocks;
@@ -19,7 +20,6 @@ import net.minecraft.server.v1_13_R2.WorldGenCanyon;
 import net.minecraft.server.v1_13_R2.WorldGenCaves;
 import net.minecraft.server.v1_13_R2.WorldGenCavesHell;
 import net.minecraft.server.v1_13_R2.WorldGenFlowers;
-import net.minecraft.server.v1_13_R2.WorldGenLargeFeature;
 import net.minecraft.server.v1_13_R2.WorldGenMineshaft;
 import net.minecraft.server.v1_13_R2.WorldGenNether;
 import net.minecraft.server.v1_13_R2.WorldGenStronghold;
@@ -540,7 +540,7 @@ public class SkylandsGenerator extends org.bukkit.generator.ChunkGenerator imple
                     b2 = Blocks.SAND;
                 } else if (BiomesUtil.isMesa(biome)) {
                     b1 = Blocks.SAND;
-                    b2 = Blocks.HARDENED_CLAY;
+                    b2 = Blocks.TERRACOTTA;
                 } else if (BiomesUtil.isHell(biome)) {
                     b1 = Blocks.NETHERRACK;
                     b2 = Blocks.NETHERRACK;
